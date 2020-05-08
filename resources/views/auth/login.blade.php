@@ -28,11 +28,6 @@
                 <div class="stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-1-tablet"></div>
                 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-6-tablet">
                   <div class="mdc-card">
-                    @if ($message = Session::get('errors'))
-                    <div class="user_login_message">
-                      <p>{{ $message }}</p>
-                    </div>
-                    @endif
                     <form action="{{ route('login') }}" method="POST">
                       {{ csrf_field() }}
                       <div class="mdc-layout-grid">
