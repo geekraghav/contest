@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link media="all" href="css/style.css" rel="stylesheet" />
-    <link media="all" href="css/simple-line-icons.css" rel="stylesheet" />
-    <link media="only screen and (max-width: 768px)" href="css/mobile.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
+    <link href="{{asset('css/jquery.mobile-1.4.5.min.css')}}" rel="stylesheet">
+    <link media="all" href="{{asset('css/style.css')}}" rel="stylesheet" />
+    <link media="all" href="{{asset('css/simple-line-icons.css')}}" rel="stylesheet" />
+    <link media="only screen and (max-width: 768px)" href="{{asset('css/mobile.css')}}" rel="stylesheet" />
     <title>Mother's Day photo contest</title>
    <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
     <link rel='stylesheet' id='jevelin-theme-settings-css'  href="{{asset('css/jevelin-dynamic-styles.css?ver=112256582')}}" type='text/css' media='all' />
@@ -34,6 +35,11 @@
       .sk-spinner > div,
       .sh-page-loader-style-spinner .object {
       background-color: #294cff!important;
+      }
+      .not-live-txt > h3{
+        color: gray;
+      font-size: 15px;
+      font-weight: 400;
       }
     </style>
     
@@ -98,7 +104,7 @@
                   <div class="header-logo sh-group-equal">
                     <a href="#" class="header-logo-container sh-table-small" rel="home">
                       <div class="sh-table-cell">
-                        <img class="sh-standard-logo" src="images/logo.svg" alt="Mothers days" width="200"/>
+                        <img class="sh-standard-logo" src="{{asset('images/logo.svg')}}" alt="Mothers days" width="200"/>
                         
                       </div>
                     </a>
@@ -111,7 +117,7 @@
           </div>
         </header>
       </div>
-      <a href="#" class="banner"></a>
+      <a href="lskt.me/MySpectacularMom" class="banner"></a>
       <div id="wrapper">
         <div class="content-container">
           <div class="container entry-content">
@@ -136,25 +142,32 @@
                         <span class="vc_empty_space_inner"></span>
                       </div>
                       <div class="sh-heading  " id="heading-LKHwUedtrT">
+                        <div class="video-frame"><iframe width="420" height="315"
+                          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                          </iframe></div>
                         <div class="sh-element-margin">
-                          <h2>Instruction</h2>
-                          <p><strong>Here's how to enter:</strong></p>
+                          <h2>Happy Mother Day's</h2>
+                          <p><strong>Click, Share, and Win Eyewear worth Rs. 3000!
+                      </strong></p>
                             <ol>
-                              <li> Fill up the form with your contact information.</li>
-                              <li> Upload your photo and convey emotions</li>
-                              <li>Share with your friends and family to vote!</li>
+                              <li> Send us a message with your name and contact details on the link below.<br>
+                                <a href="lskt.me/MySpectacularMom">lskt.me/MySpectacularMom
+                                </a></li>
+                              <li> Share a fun or cute selfie with your Mom along with your message for her.</li>
+                              <li>Wait for the name of 12 winners to be announced on our website, every hour*!</li>
                          </ol>
 
-                         <p><strong>Prize:</strong></p>
-                            <ol>
+                         <p><strong>We’d love to see you win and feature you on the Lenskart Website and Social Media platforms. 
+Get started!</strong></p>
+                            <!-- <ol>
                               <li>Get a chance to get featured on Lenskart website and all social media handles.</li>
                               <li>Win an eyewear worth 3000/-</li>
-                         </ol>
+                         </ol> -->
 
-                         <a href="#" class="tc"><i>Terms & Conditions</i></a>
+                         <a href="#" class="tc popup"><i>Terms & Conditions</i></a>
 
                           <h2 class="sh-heading-content size-custom text-center">
-                            <a href="#" class="participate">Participate</a>     
+                            <a href="lskt.me/MySpectacularMom" class="participate">SHARE A SELFIE NOW</a>     
                           </h2>
 
                           <h2>Contest Entries</h2>
@@ -166,179 +179,8 @@
                 </div>
                 <style type="text/css">@media (max-width: 800px) { #content .vc_row_1532184558, .sh-footer-template .vc_row_1532184558, .sh-header-template .vc_row_1532184558 { padding: 0px 0px 0px 0px!important;}}</style>
               </div>
-              <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1571430219837 vc_row-no-padding vc_row_1140879858">
-                <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_1668033939">
-                  <div class="vc_column-inner ">
-                    <div class="wpb_wrapper">
-                      
-                      <div id="portfolio-fancy-filter-7F42qo5iwf" class="sh-filter-container sh-filter-fancy-container sh-portfolio-filter-style3 sh-portfolio-filter-style4 sh-portfolio-filter-alignment-center sh-portfolio-filter-mobile-alignment-center">
-                        <div class="sh-filter" id="filter-7F42qo5iwf">
-                         <span class="sh-filter-item active" data-filter="*">
-                            <div class="sh-filter-item-content">Current</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-art">
-                            <div class="sh-filter-item-content">0 to 1hour</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-graphic-design" >
-                            <div class="sh-filter-item-content">01 to 2 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-hard-press" >
-                            <div class="sh-filter-item-content">02 to 3 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-offices">
-                            <div class="sh-filter-item-content">03 to 4 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-packaging">
-                            <div class="sh-filter-item-content">04 to 5 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-shopping">
-                            <div class="sh-filter-item-content">05 to 6 hours</div>
-                          </span>
-                        </div>
-                      </div>
-                  
-                      <div id="portfolio-fancy-7F42qo5iwf" class="sh-portfolio-fancy sh-portfolio-fancy-columns3">
-                        <div class="sh-portfolio-fancy-item category-packaging" id="portfolio-661">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/greg-t-386887-unsplash1-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font popup">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-offices" id="portfolio-654">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/simone-hutsch-oqlh6RsrYB0-unsplash1-1-777x1024.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font popup">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-graphic-design" id="portfolio-653">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/simone-hutsch-_M4SLgyL3Ps-unsplash-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font popup">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-graphic-design" id="portfolio-666">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/Scene-43-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-packaging" id="portfolio-652">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/inside-weather-RQOABS5RH0M-unsplash-1-774x1024.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-shopping" id="portfolio-647">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/simone-hutsch-wkmciuuhL54-unsplash-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-art" id="portfolio-646">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/simone-hutsch-vU_kdB2PSTY-unsplash-1-777x1024.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-offices" id="portfolio-645">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/simone-hutsch-LZSpneVsnt0-unsplash-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-hard-press" id="portfolio-643">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/essentialiving-h4ry_4h80VA-unsplash-1-777x1024.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-shopping" id="portfolio-642">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/simone-hutsch-UpW6pfsN5I-unsplash-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="sh-portfolio-fancy-item category-graphic-design" id="portfolio-174">
-                          <div class="sh-portfolio-fancy-itemc-container">
-                            <img class="sh-portfolio-img" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/31/2019/04/inside-weather-BayIzHKkjM4-unsplash-1.jpg" alt="" />
-                            <div class="sh-portfolio-fancy-item-overlay">
-                              <div class="sh-portfolio-fancy-item-overlay-container">
-                                <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font">View Photo</a>            
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <style type="text/css">
-                        #portfolio-fancy-7F42qo5iwf .sh-portfolio-fancy-item-overlay-bg {background: rgba(0,0,0,0.55);background: -moz-linear-gradient(45deg, rgba(0,0,0,0.55) 0%, rgba(41,76,255,0.53) 100%);background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.55) 0%, rgba(41,76,255,0.53) 100%);background: linear-gradient(45deg, rgba(0,0,0,0.55) 0%, rgba(41,76,255,0.53) 100%);}#portfolio-fancy-7F42qo5iwf .sh-portfolio-fancy-item {padding: 0 0px; margin: 0px 0;}            
-                      </style>
-                      <style type="text/css"> .vc_column_1668033939:not(.vc_parallax):not(.jarallax) { overflow: center!important; position: relative; }</style>
-                    </div>
-                  </div>
-                </div>
-                <style type="text/css">@media (max-width: 800px) { #content .vc_row_1140879858, .sh-footer-template .vc_row_1140879858, .sh-header-template .vc_row_1140879858 { padding: 0px 0px 0px 0px!important;}}</style>
+              <div class="text-center not-live-txt" >
+                <h3>The contest is not live yet.</h3>
               </div>
               <div class="vc_row-full-width vc_clearfix"></div>
               <div class="sh-clear"></div>
@@ -352,7 +194,7 @@
         <footer class="sh-footer-template" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
           <div class="container">
             <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1571415669001{padding-top: 80px !important;padding-bottom: 80px !important;background-color: #252525 !important;}.vc_custom_1571414279790{background-color: #252525 !important;}.vc_custom_1570627715459{margin-right: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-left: 0px !important;}.vc_custom_1570627774523{padding-top: 0px !important;}.vc_custom_1553695818577{margin-right: 0px !important;margin-left: 0px !important;padding-top: 0px !important;padding-right: 0px !important;padding-left: 0px !important;}</style>
-            <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1571415669001 vc_row-has-fill vc_row-o-equal-height vc_row-o-content-middle vc_row-flex vc_row_1611052491">
+            <!-- <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1571415669001 vc_row-has-fill vc_row-o-equal-height vc_row-o-content-middle vc_row-flex vc_row_1611052491">
               <div class="wpb_column vc_column_container vc_col-sm-6 vc_column_mobile_element_alignment_center vc_column_2143106740">
                 <div class="vc_column-inner vc_custom_1570627715459">
                   <div class="wpb_wrapper">
@@ -388,7 +230,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="vc_row-full-width vc_clearfix"></div>
             <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1571414279790 vc_row-has-fill vc_row_1731273741">
               <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -398,7 +240,7 @@
                     <style type="text/css">
                       #divider-u84RqmpQLJ {}#divider-u84RqmpQLJ.sh-divider-content-none .sh-divider-line {border-top-width: 1px;border-top-color: rgba(76,76,76,0.48);border-top-style: solid;}            
                     </style>
-                    <div class="sh-empty-space vc_empty_space sh-empty-space-8H5Xsedtwl  " style="height: 30px">
+                    <div class="sh-empty-space vc_empty_space sh-empty-space-8H5Xsedtwl  " style="height: 3px">
                       <span class="vc_empty_space_inner"></span>
                     </div>
                     <style media="screen">
@@ -438,7 +280,7 @@
                   <div class="wpb_wrapper">
                     <div id="text-block-PoT57FShCc" class="sh-text-block">
                       </p>
-                      <p style="text-align: center;">Copyright © Lenskart Mother's &#8211; photo contest</p>
+                      <p style="text-align: center;">Copyright © Lenskart Solution Private Limited</p>
                       <p>
                     </div>
                     <style type="text/css">
@@ -772,7 +614,9 @@
       jQuery(".popup").simplePopup({ type: "html", htmlSelector: "#popup1" });
     });
     </script>
-      <div id="popup1" class="popup-box">
+
+    <!-- Term popup-->
+       <div id="popup1" class="popup-box">
        <div class="photo-img">
           <img src="images/photo.png">
           <div class="photo-img-inner">
@@ -796,10 +640,20 @@
             <i class="icon-social-instagram"></i>
           </a>
                   <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-whatsapp"><img src="{{asset('images/social-media.svg')}}" width="20"></i>
+            <i class="icon-social-whatsapp"><img src="images/social-media.svg" width="20"></i>
           </a>
       </div>
       </div>
+   <!-- End Term popup-->
+     <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+          <iframe src="{{url('share')}}" width="497" height="298" seamless=""></iframe>
+      </div>
       <!-- popup end -->
+      <script src="{{asset('js/jquery.js')}}"></script>
+      <script src="{{asset('js/index.js')}}"></script>
+      <script src="{{asset('js/jquery.mobile-1.4.5.min.js')}}"></script>
+      <script src="{{asset('js/popup-iframe-map.js')}}"></script>
+      <script src="{{asset('js/popup-iframe-video.js.js')}}"></script>
+      
   </body>
 </html>

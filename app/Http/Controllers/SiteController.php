@@ -16,11 +16,7 @@ class SiteController extends Controller
      */
     public function index()
     { 
-
-        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->whereBetween('created_at', [
-             now()->format('Y-m-d H:00:00'),
-             now()->addHours(1)->format('Y-m-d H:00:00')
-            ])->get()->toArray(); 
+        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->where('is_approved',1)->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 23 HOUR)")->get()->toArray();
         // $imageData = $imageKey = [];
         // if(sizeof($images)>0){
         //     $lastImageTime = strtotime($images[0]->created_at);
@@ -43,8 +39,44 @@ class SiteController extends Controller
         return view('front_end.pages.download');//->with('imageData',$imageData)->with('imageKey',$imageKey);
     }    
     
-    public function postCall(Request $request)
+    public function ApiCall(Request $request)
+    { 
+        if($request->has('from_hour') && $request->has('to_hour')){
+            $fromHour = $request->from_hour;
+            $toHour = $request->to_hour;
+            $fromData = date('Y-m-d')." $fromHour:00:00"; 
+            $toData = date('Y-m-d')." $toHour:59:59";   
+        }
+        
+        if(isset($fromData) && isset($toData)){
+        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->where('is_approved',1)->whereBetween('created_at', [$fromData, $toData])->get()->toArray(); 
+        }else{
+        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->where('is_approved',1)->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 23 HOUR)")->get()->toArray(); 
+        } 
+        return $images;
+    }
+
+    public function winnerApi(Request $request)
     {
+        if($request->has('from_hour') && $request->has('to_hour')){
+            $fromHour = $request->from_hour;
+            $toHour = $request->to_hour;
+            $fromData = date('Y-m-d')." $fromHour:00:00"; 
+            $toData = date('Y-m-d')." $toHour:59:59";   
+        }
+        
+        if(isset($fromData) && isset($toData)){
+        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->where('is_winner',1)->whereBetween('created_at', [$fromData, $toData])->get()->toArray(); 
+        }else{
+        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->where('is_winner',1)->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 23 HOUR)")->get()->toArray(); 
+        } 
+        return $images;
+    }
+
+    // share view
+    public function share()
+    {
+        return view('front_end.pages.share');
     }
 
     /**
