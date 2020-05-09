@@ -143,37 +143,50 @@
                       </div>
                       <div class="sh-heading  " id="heading-LKHwUedtrT">
                         <div class="video-frame"><iframe width="420" height="315"
-                          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                          src="https://www.youtube.com/embed/f4gMSmc4IHI">
                           </iframe></div>
                         <div class="sh-element-margin">
                           <h2>Happy Mother's Day</h2>
                           <p><strong>Click, Share, and Win Eyewear worth Rs. 3000!
                       </strong></p>
                             <ol>
-                              <li> Send us a message with your name and contact details on the link below.<br>
+                              <li> To enter the contest, send your name to the link given below.<br>
                                 <a href="http://lskt.me/MySpectacularMom">lskt.me/MySpectacularMom
                                 </a></li>
                               <li> Share a fun or cute selfie with your Mom along with your message for her.</li>
-                              <li>Wait for the name of 12 winners to be announced on our website, every hour*!</li>
+                              <li> A winner will be selected every five minutes.</li>
+                              <li>We will announce the winners every hour on our Website and Social Media*.</li>
+                              <li>The closing date of the entries for the contest is Monday,11th May, 4 PM.</li>
                          </ol>
-
-                         <p><strong>We’d love to see you win and feature you on the Lenskart Website and Social Media platforms. 
-Get started!</strong></p>
-                            <!-- <ol>
+                         <p><strong>Prize Communication:</strong></p>
+                            {{-- <ol>
                               <li>Get a chance to get featured on Lenskart website and all social media handles.</li>
                               <li>Win an eyewear worth 3000/-</li>
-                         </ol> -->
+                         </ol>  --}}
 
-                         <a href="#" class="tc" id="term_cd"><i>Terms & Conditions</i></a>
+                         <p>Images will be approved and winners will be chosen at random, on the basis of approval time. <br>
 
+                          You will receive your vouchers in 24-48 hours. </p>  
+                          
+                          <p>
+                          We’d love to see you win and feature you on the Lenskart Website and Social Media platforms. 
+                          Get started!
+                          </p>
+
+                  
                           <h2 class="sh-heading-content size-custom text-center">
                             <a href="http://lskt.me/MySpectacularMom" class="participate">SHARE A SELFIE NOW</a>     
                           </h2>
-                           <div class='term-cd' style="display: none;">
-<p>1- A free pair every hour offer excludes the time slot 12AM -9 AM</p>
-<p>2- Lenskart shall have the right to all content that in its sole discretion violates, or is alleged to violate, any applicable law or either the spirit or letter of these Terms of Use. We hereby acknowledge and affirm that these images constitute the opinion of the Individuals in their personal capacity, and may not represent official positions of Lenskart in any manner. Lenskart retains all copyright to these images.</p><br>
 
-</p>
+                          <a href="#" class="tc" id="term_cd"><i>*Terms & Conditions</i></a>
+
+                           <div class='term-cd' style="display: none;">
+
+                              <p>1- By submitting your entry, you are indicating your agreement to these terms and conditions.</p>
+                              <p>2- The last entries will be allowed until 12 AM. Fresh sets of entries start at 9 AM. </p>
+                              <p>3- The images submitted should be clear and feature your mother. </p>
+                              <p>4- Lenskart shall have the right to all content that in its sole discretion violates, or is alleged to violate, any applicable law or either the spirit or letter of these Terms of Use. We hereby acknowledge and affirm that these images constitute the opinion of the Individuals in their personal capacity, and may not represent official positions of Lenskart in any manner. </p>
+                              <p>5- Lenskart retains all copyright to these images.</p>
                           </div>
 
                           <h2>Contest Entries</h2>
