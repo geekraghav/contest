@@ -6,25 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lenskart Store Admin-Panel</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="/assets/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/assets/admin/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
-    <link rel="stylesheet" href="/assets/admin/assets/vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="/assets/admin/assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/vendors/jvectormap/jquery-jvectormap.css">
     <!-- End plugin css for this page -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="/assets/admin/assets/css/demo/style.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/css/demo/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="/assets/admin/assets/images/favicon.png" />
+    <link rel="shortcut icon" href="/public/assets/admin/assets/images/favicon.png" />
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"/>
   </head>
   <body>
-    <script src="/assets/admin/assets/js/preloader.js"></script>
+    <script src="/public/assets/admin/assets/js/preloader.js"></script>
     <div class="body-wrapper">
       <!-- partial:partials/_sidebar.html -->
       @include('layout.admin.left_sidebar')
