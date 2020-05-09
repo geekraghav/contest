@@ -39,7 +39,7 @@ $(document).ready(function () {
     $("#getdropdowndata").on("change", function () {
 
         var timeSlot = $(this).val();
-        window.location.href = "?data=timeslot&timing=" + timeSlot;
+        window.location.href = "?data=timeslot&timing=" + timeSlot+"&"+checkPass;
         // $.ajax({
         //     type: "POST",
         //     url: dropdownDataURL,
@@ -54,20 +54,35 @@ $(document).ready(function () {
 
 
     $("#winnerdata").on("click", function () {
-        window.location.href = "?data=winner";
+        if (checkPass) {
+            window.location.href = "?data=winner&" + checkPass;
+        } else {
+            window.location.href = "?data=winner";
+        }
+
     });
 
     $("#currentdata").on("click", function () {
-        window.location.href = "?data=current";
+        if (checkPass) {
+            window.location.href = "?data=current&" + checkPass;
+        } else {
+            window.location.href = "?data=current";
+        }
+
     });
 
     $("#shareimage").on("click", function () {
         var imageURL = $(this).attr('data-imageurl');
-        window.location.href = "share?url="+imageURL;
+        if (checkPass) {
+            window.location.href = "share?url=" + imageURL + "&" + checkPass;
+        } else {
+            window.location.href = "share?url=" + imageURL;
+        }
+
     });
 
 
-    $(function() {
+    $(function () {
         $('.lazy').lazy();
     });
 

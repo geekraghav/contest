@@ -47,11 +47,14 @@
     <?php 
           
     $url = null;
+    $checkpass = null;
     if(Request::query('is_participate')){
       if(Request::query('is_participate')==true){
+        $checkpass = 'is_participate=true';
         $url = 'http://lskt.me/MySpectacularMom';
       }else{
         $url = ''; 
+        $checkpass = '';
       }
     }
 
@@ -794,6 +797,7 @@
       <script>
         window.dropdownDataURL = "{{url('/image/api')}}";
         window.winnerData = "{{url('/winner/images')}}";
+        window.checkPass = "{{$checkpass}}";
       </script>
       <script src="{{asset('js/custom.js')}}"></script>
       <script>
