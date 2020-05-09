@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Site;
 use Illuminate\Http\Request;
+use Carbon;
 use DB;
 
 class SiteController extends Controller
@@ -15,26 +16,30 @@ class SiteController extends Controller
      */
     public function index()
     { 
-        $images = DB::table('message_synch_t1')->select('image_url','created_at')->orderBy('created_at', 'DESC')->get()->toArray();
-        $imageData = $imageKey = [];
-        if(sizeof($images)>0){
-            $lastImageTime = strtotime($images[0]->created_at);
-            $lastImageTime = date('H', $lastImageTime);
-            $before6HourTime = $lastImageTime-7; 
-            foreach ($images as $value) {
-                $hour = strtotime($value->created_at);
-                $hour = date('H', $hour); 
-                if( ($lastImageTime<=$hour) && ($lastImageTime-1>=$hour) ){
-                     $imageData['hour-'.$hour][] = $value;
-                }else{
-                    $lastImageTime--;
-                    $imageData['hour-'.$hour][] = $value;
-                }
-               if($lastImageTime==$before6HourTime)
-                    break;
-            }
-            $imageKey = array_keys($imageData); 
-        }
+
+        $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->whereBetween('created_at', [
+             now()->format('Y-m-d H:00:00'),
+             now()->addHours(1)->format('Y-m-d H:00:00')
+            ])->get()->toArray(); dd($images);
+        // $imageData = $imageKey = [];
+        // if(sizeof($images)>0){
+        //     $lastImageTime = strtotime($images[0]->created_at);
+        //     $lastImageTime = date('H', $lastImageTime);
+        //     $before6HourTime = $lastImageTime-7; 
+        //     foreach ($images as $value) {
+        //         $hour = strtotime($value->created_at);
+        //         $hour = date('H', $hour); 
+        //         if( ($lastImageTime<=$hour) && ($lastImageTime-1>=$hour) ){
+        //              $imageData['hour-'.$hour][] = $value;
+        //         }else{
+        //             $lastImageTime--;
+        //             $imageData['hour-'.$hour][] = $value;
+        //         }
+        //        if($lastImageTime==$before6HourTime)
+        //             break;
+        //     }
+        //     $imageKey = array_keys($imageData); 
+        // }
         return view('front_end.pages.home')->with('imageData',$imageData)->with('imageKey',$imageKey);
     }    
     
