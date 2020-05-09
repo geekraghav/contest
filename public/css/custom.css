@@ -33,7 +33,28 @@ ul.page-numbers a:hover,
 .sh-header-top-10 .header-contacts-details-large-icon i,
 .sh-unyson-frontend-test.active,
 .plyr--full-ui input[type=range] {
-	color: #294cff!important;
+	color: #3b9f95!important;
+}
+
+.video-frame{
+	float: right;
+}
+.video-frame iframe{
+	border: none;
+}
+
+#menuall-content .sh-filter-item{
+	color: #999;	
+	cursor: pointer;
+	border-bottom: 2px solid transparent;
+	display: inline-block;
+}
+#menuall-content .sh-filter-item.active{
+	color: #3b9f95;	
+	border-bottom: 2px solid #3b9f95;
+}
+.current-menu span{
+	margin: 0 20px;
 }
 .participate,a.sh-portfolio-category.sh-heading-font{
 	display: inline-block;
@@ -287,6 +308,37 @@ ul.page-numbers .current:hover,
 .sh-footer .sh-footer-widgets li a:hover,
 .sh-footer .sh-footer-widgets h6:hover {
 	color: #f62433;
+}
+#menuall-content{
+	margin:0 auto;
+	max-width: 1100px;
+}
+.select-all {
+    display: flex;
+    width:400px;
+}
+.select-all label{
+	width: 270px;
+	margin-top: 2px;
+}
+.select-all select{
+ line-height:40px!important;
+ -webkit-appearance: inner-spin-button;
+ height: 35px;
+}
+.current-menu {
+	width: 500px;
+	display: flex;
+}
+.process-menu {
+    width: 500px;
+}
+.menu-nav{
+	display: flex;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 600;;
+	height: 28px;
 }
 
 @media screen and (max-width:767px){

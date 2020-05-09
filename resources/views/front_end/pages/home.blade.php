@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon.ico" />
-    <link media="all" href="css/style.css" rel="stylesheet" />
-    <link media="all" href="css/simple-line-icons.css" rel="stylesheet" />
-    <link media="only screen and (max-width: 768px)" href="css/mobile.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
+    <link media="all" href="{{asset('css/style.css')}}" rel="stylesheet" />
+    <link media="all" href="{{asset('css/simple-line-icons.css')}}" rel="stylesheet" />
+    <link media="only screen and (max-width: 768px)" href="{{asset('css/mobile.css')}}" rel="stylesheet" />
     <title>Mother's Day photo contest</title>
    <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
     <link rel='stylesheet' id='jevelin-theme-settings-css'  href="{{asset('css/jevelin-dynamic-styles.css?ver=112256582')}}" type='text/css' media='all' />
@@ -98,7 +98,7 @@
                   <div class="header-logo sh-group-equal">
                     <a href="#" class="header-logo-container sh-table-small" rel="home">
                       <div class="sh-table-cell">
-                        <img class="sh-standard-logo" src="images/logo.svg" alt="Mothers days" width="200"/>
+                        <img class="sh-standard-logo" src="{{asset('images/logo.svg')}}" alt="Mothers days" width="200"/>
                         
                       </div>
                     </a>
@@ -136,6 +136,9 @@
                         <span class="vc_empty_space_inner"></span>
                       </div>
                       <div class="sh-heading  " id="heading-LKHwUedtrT">
+                        <div class="video-frame"><iframe width="420" height="315"
+                          src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                          </iframe></div>
                         <div class="sh-element-margin">
                           <h2>Instruction</h2>
                           <p><strong>Here's how to enter:</strong></p>
@@ -171,31 +174,36 @@
                   <div class="vc_column-inner ">
                     <div class="wpb_wrapper">
                       
-                      <div id="portfolio-fancy-filter-7F42qo5iwf" class="sh-filter-container sh-filter-fancy-container sh-portfolio-filter-style3 sh-portfolio-filter-style4 sh-portfolio-filter-alignment-center sh-portfolio-filter-mobile-alignment-center">
-                        <div class="sh-filter" id="filter-7F42qo5iwf">
-                         <span class="sh-filter-item active" data-filter="*">
-                            <div class="sh-filter-item-content">Current</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-art">
-                            <div class="sh-filter-item-content">0 to 1hour</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-graphic-design" >
-                            <div class="sh-filter-item-content">01 to 2 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-hard-press" >
-                            <div class="sh-filter-item-content">02 to 3 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-offices">
-                            <div class="sh-filter-item-content">03 to 4 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-packaging">
-                            <div class="sh-filter-item-content">04 to 5 hours</div>
-                          </span>
-                          <span class="sh-filter-item" data-filter=".category-shopping">
-                            <div class="sh-filter-item-content">05 to 6 hours</div>
-                          </span>
+                      <div id="menuall-content">
+                        <div class="menu-nav">
+                        <div class="process-menu">
+                          <span class="sh-filter-item active">
+                            Current 
+                          </span> 
                         </div>
-                      </div>
+                     
+                      <div class="current-menu"> 
+                        <span class="sh-filter-item active">
+                          Current Contest
+                        </span> 
+                        <span class="sh-filter-item" >
+                          Winners
+                        </span>                    
+                    </div>
+
+                    <div class="select-all">
+                      <label>Previus Contest</label>
+                      <select>
+                        <option>Last Hours</option>>
+                        <option>1:30AM to 2:30PM</option>
+                        <option>2:30AM to 3:30PM</option>
+                        <option>3:30AM to 4:30PM</option>
+                        <option>4:30AM to 5:30PM</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  </div>
                   
                       <div id="portfolio-fancy-7F42qo5iwf" class="sh-portfolio-fancy sh-portfolio-fancy-columns3">
                         <div class="sh-portfolio-fancy-item category-packaging" id="portfolio-661">
@@ -774,7 +782,7 @@
     </script>
       <div id="popup1" class="popup-box">
        <div class="photo-img">
-          <img src="images/photo.png">
+          <img src="{{asset('images/photo.png')}}">
           <div class="photo-img-inner">
             <img src="https://i.ytimg.com/vi/Cwu1x1SP3kQ/maxresdefault.jpg">
         </div>
