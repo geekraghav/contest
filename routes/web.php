@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'SiteController@index')->name('home');
-Route::get('/image/api/{hour}', 'SiteController@ApiCall')->name('home');
-Route::get('/winner/images/{hour}', 'SiteController@winnerApi')->name('home');
+Route::get('/image/api', 'SiteController@ApiCall')->name('home');
+Route::get('/winner/images/{from_hour}/{to_hour}', 'SiteController@winnerApi')->name('home');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {

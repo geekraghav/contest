@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" />
+    <link href="{{asset('css/jquery.mobile-1.4.5.min.css')}}" rel="stylesheet">
     <link media="all" href="{{asset('css/style.css')}}" rel="stylesheet" />
     <link media="all" href="{{asset('css/simple-line-icons.css')}}" rel="stylesheet" />
     <link media="only screen and (max-width: 768px)" href="{{asset('css/mobile.css')}}" rel="stylesheet" />
@@ -212,7 +213,7 @@
                             <div class="sh-portfolio-fancy-item-overlay">
                               <div class="sh-portfolio-fancy-item-overlay-container">
                                 <div class="sh-portfolio-fancy-item-overlay-categories">
-                                  <a href="#" class="sh-portfolio-category sh-heading-font popup">View Photo</a>            
+                                  <a href="#popupVideo" data-rel="popup" data-position-to="window" class="sh-portfolio-category sh-heading-font ui-btn ui-corner-all ui-shadow ui-btn-inline">View Photo</a>           
                                 </div>
                               </div>
                             </div>
@@ -776,38 +777,19 @@
     <!-- popup start -->
     <link href="{{asset('css/jquery.simple-popup.min.css')}}" rel="stylesheet" type="text/css">
     <script>
-    jQuery(document).ready(function() {
-      jQuery(".popup").simplePopup({ type: "html", htmlSelector: "#popup1" });
-    });
+    // jQuery(document).ready(function() {
+    //   jQuery(".popup").simplePopup({ type: "html", htmlSelector: "#popup1" });
+    // });
     </script>
-      <div id="popup1" class="popup-box">
-       <div class="photo-img">
-          <img src="{{asset('images/photo.png')}}">
-          <div class="photo-img-inner">
-            <img src="https://i.ytimg.com/vi/Cwu1x1SP3kQ/maxresdefault.jpg">
-        </div>
-      
-      </div>
-
-        <div class="sh-social-widgets">
-          <div class="sh-social-share-button sh-noselect">
-            <i class="icon-share"></i>
-            <span>Share</span>
-        </div>
-          <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-facebook"></i>
-          </a>
-                  <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-twitter"></i>
-          </a>
-                  <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-instagram"></i>
-          </a>
-                  <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-whatsapp"><img src="{{asset('images/social-media.svg')}}" width="20"></i>
-          </a>
-      </div>
+     <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+          <iframe src="share.html" width="497" height="298" seamless=""></iframe>
       </div>
       <!-- popup end -->
+      <script src="{{asset('js/jquery.js')}}"></script>
+      <script src="{{asset('js/index.js')}}"></script>
+      <script src="{{asset('js/jquery.mobile-1.4.5.min.js')}}"></script>
+      <script src="{{asset('js/popup-iframe-map.js')}}"></script>
+      <script src="{{asset('js/popup-iframe-video.js.js')}}"></script>
+      
   </body>
 </html>
