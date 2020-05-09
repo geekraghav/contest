@@ -41,7 +41,6 @@ class SiteController extends Controller
     
     public function ApiCall(Request $request)
     { 
-        date_default_timezone_set('Asia/Kolkata');
         if($request->has('from_hour') && $request->has('to_hour')){
             $fromHour = $request->from_hour;
             $toHour = $request->to_hour;
@@ -57,9 +56,8 @@ class SiteController extends Controller
         return $images;
     }
 
-    public function winnerApi($hour)
+    public function winnerApi(Request $request)
     {
-        date_default_timezone_set('Asia/Kolkata');
         if($request->has('from_hour') && $request->has('to_hour')){
             $fromHour = $request->from_hour;
             $toHour = $request->to_hour;
@@ -73,6 +71,12 @@ class SiteController extends Controller
         $images = DB::table('message_synch_t1')->select('conversation_id','user_id','mobile_no','image_url','created_at')->where('is_winner',1)->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 23 HOUR)")->get()->toArray(); 
         } 
         return $images;
+    }
+
+    // share view
+    public function share()
+    {
+        return view('front_end.pages.share');
     }
 
     /**

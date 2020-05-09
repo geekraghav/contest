@@ -782,7 +782,7 @@
     // });
     </script>
      <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
-          <iframe src="share.html" width="497" height="298" seamless=""></iframe>
+          <iframe src="{{url('share')}}" width="497" height="298" seamless=""></iframe>
       </div>
       <!-- popup end -->
       <script src="{{asset('js/jquery.js')}}"></script>
