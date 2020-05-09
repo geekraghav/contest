@@ -109,6 +109,7 @@
                 @endforeach
                 @php($i)
                 @endif
+                {{$data->links()}}
               </tbody>
             </table>
           </div>
