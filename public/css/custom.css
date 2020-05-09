@@ -59,11 +59,11 @@ ul.page-numbers a:hover,
 .video-frame iframe{
 	border: none;
 }
-.ui-popup iframe{
-	width: 520px;
-	border: none;
-	height: 550px;
-	margin-top: -25px;
+.ui-popup iframe {
+    width: 520px;
+    border: none;
+    height: 614px;
+    margin-top: -25px;
 }
 .ui-popup-container{
 	position: fixed;
@@ -104,21 +104,28 @@ a.sh-portfolio-category.sh-heading-font{
 .photo-img{
 	position: relative;
 }
+.photo-img-inner img {
+    object-fit: cover;
+    height: 259px;
+    width: 100%;
+}
 .photo-img-inner {
-	position: absolute;
+    position: absolute;
     right: 109px;
     top: 112px;
-    width: 241px;
-    height: 225px;
+    width: 283px;
+    height: 260px;
+    transform: rotate(-9deg);
     z-index: -1;
-    
 }
-.photo-img-inner img{
-  object-fit: cover;
-  height: 225px;
-  width: 100%;
 
+.sh-social-widgets {
+    display: flex;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    max-width: 280px;
 }
+
 .banner{
 	background: url(../images/banner.jpg) center top no-repeat;
 	width: 100%;
@@ -412,6 +419,7 @@ ul.page-numbers .current:hover,
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.8);
 	display: none;
+	z-index: 9999;
 }
 .popup-main{
 	background: #fff;
@@ -434,8 +442,15 @@ ul.page-numbers .current:hover,
 	padding-left: 20px;
 }
 .popup-terms li,.popup-terms p{
-	line-height: 24px;
+	line-height: 20px;
 	margin-bottom: 10px;
+	font-size: 12px;
+}
+.popup-terms li ul li{
+	list-style: lower-alpha;
+}
+.page-content h3{
+	margin-top: 35px;
 }
 
 @media screen and (max-width:1024px){
@@ -463,6 +478,22 @@ ul.page-numbers .current:hover,
 }
 
 @media screen and (max-width:767px){
+	.photo-img-inner img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	.popup-box{
+		top:0px !important;
+	}
+
+	.photo-img-inner {
+		right: 21.7%;
+		top: 21.8%;
+		width: 53%;
+		height: 49%;
+	}
 	.banner{
 		height: 380px;
 		background: url(../images/banner-img.png) center top no-repeat;
@@ -542,5 +573,13 @@ ul.page-numbers .current:hover,
 .banner {
     height: 360px;
     margin-top: -28px;
+}
+}
+@media screen and (max-width: 360px){
+.photo-img-inner {
+    right: 21.6%;
+    top: 21.8%;
+    width: 53%;
+    height: 49.5%;
 }
 }
