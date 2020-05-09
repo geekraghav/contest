@@ -41,7 +41,21 @@
       font-size: 15px;
       font-weight: 400;
       }
+
     </style>
+
+    <?php 
+          
+    $url = null;
+    if(Request::query('is_participate')){
+      if(Request::query('is_participate')==true){
+        $url = 'http://lskt.me/MySpectacularMom';
+      }else{
+        $url = ''; 
+      }
+    }
+
+    ?>
     
     <script type="text/javascript">function setREVStartSize(e){     
       try {               
@@ -102,7 +116,7 @@
               <div class="sh-table">
                 <div class="sh-table-cell sh-group">
                   <div class="header-logo sh-group-equal">
-                    <a href="#" class="header-logo-container sh-table-small" rel="home">
+                  <a href="{{url('/')}}" class="header-logo-container sh-table-small" rel="home">
                       <div class="sh-table-cell">
                         <img class="sh-standard-logo" src="{{asset('images/logo.svg')}}" alt="Mothers days" width="200"/>
                         
@@ -117,7 +131,9 @@
           </div>
         </header>
       </div>
-      <a href="http://lskt.me/MySpectacularMom" class="banner"></a>
+
+  
+    <a href="{{$url}}" disabled class="banner"></a>
       <div id="wrapper">
         <div class="content-container">
           <div class="container entry-content">
@@ -156,7 +172,14 @@
                               Get started!</p>
 
                               <h2 class="sh-heading-content size-custom text-center">
-                            <a href="http://lskt.me/MySpectacularMom" class="participate">SHARE A SELFIE NOW</a>     
+                                <?php 
+                                  if(!empty($url)){
+                                    ?>
+                                    <a href="{{$url}}" class="participate">SHARE A SELFIE NOW</a>     
+                                    <?php
+                                  }
+                                  ?>
+                            
                           </h2>
 
                          <a href="#" class="tc popup-tc"><i>Terms & Conditions</i></a>
@@ -181,8 +204,113 @@
                 </div>
                 <style type="text/css">@media (max-width: 800px) { #content .vc_row_1532184558, .sh-footer-template .vc_row_1532184558, .sh-header-template .vc_row_1532184558 { padding: 0px 0px 0px 0px!important;}}</style>
               </div>
-              <div class="text-center not-live-txt" >
+              {{-- <div class="text-center not-live-txt" >
                 <h3>The contest is not live yet.</h3>
+              </div> --}}
+              <div id="gallery-data" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1571430219837 vc_row-no-padding vc_row_1140879858" >
+                <div class="wpb_column vc_column_container vc_col-sm-12 vc_column_1668033939">
+                  <div class="vc_column-inner ">
+                    <div class="wpb_wrapper">
+                      
+                      <div id="menuall-content">
+                        <div class="menu-nav">
+                        {{-- <div class="process-menu">
+                          <span class="sh-filter-item active">
+                            Current 
+                          </span> 
+                        </div> --}}
+                     
+                      
+                      <?php
+                      
+                      $cactive = "active";
+                      $wactive = null;
+                      $tactive = null;
+
+                        if(Request::query('data')){
+                          if(Request::query('data')=='current'){
+                            $cactive = 'active';
+                          } 
+                          if(Request::query('data')=='winner'){
+                            $wactive = 'active';
+                            $cactive = null;
+                          }
+                          if(Request::query('timing')){
+                            $tactive = Request::query('timing');
+                            $cactive = null;
+                          }
+                        
+                        }  
+                      ?>
+
+
+
+                      <div class="current-menu"> 
+                      <span class="sh-filter-item {{$cactive}}" id="currentdata">
+                          Current Contest
+                        </span> 
+                        <span id="winnerdata" class="sh-filter-item {{$wactive}}" >
+                          All Winners
+                        </span>                    
+                    </div>
+
+                    <div class="select-all">
+                      
+                      <select id="getdropdowndata">
+                        <option selected>Previous Slots</option>>
+                        <option value="9-10" <?php if($tactive=='9-10'){  echo "selected"; }  ?>>9:00AM to 10:00AM</option>
+                        <option value="10-11" <?php if($tactive=='10-11'){  echo "selected"; }  ?>>10:00AM to 11:00AM</option>
+                        <option value="11-12" <?php if($tactive=='11-12'){  echo "selected"; }  ?>>11:00AM to 12:00PM</option>
+                        <option value="12-13" <?php if($tactive=='12-13'){  echo "selected"; }  ?>>12:00PM to 1:00PM</option>
+                        <option value="13-14" <?php if($tactive=='13-14'){  echo "selected"; }  ?>>1:00PM to 2:00PM</option>
+                        <option value="14-15" <?php if($tactive=='14-15'){  echo "selected"; }  ?>>2:00PM to 3:00PM</option>
+                        <option value="15-16" <?php if($tactive=='15-16'){  echo "selected"; }  ?>>3:00PM to 4:00PM</option>
+                        <option value="16-17" <?php if($tactive=='16-17'){  echo "selected"; }  ?>>4:00PM to 5:00PM</option>
+                        <option value="17-18" <?php if($tactive=='17-18'){  echo "selected"; }  ?>>5:00PM to 6:00PM</option>
+                        <option value="18-19" <?php if($tactive=='18-19'){  echo "selected"; }  ?>>6:00PM to 7:00PM</option>
+                        <option value="19-20" <?php if($tactive=='19-20'){  echo "selected"; }  ?>>7:00PM to 8:00PM</option>
+                        <option value="20-21" <?php if($tactive=='20-21'){  echo "selected"; }  ?>>8:00PM to 9:00PM</option>
+                        <option value="21-22" <?php if($tactive=='21-22'){  echo "selected"; }  ?>>9:00PM to 10:00PM</option>
+                        <option value="22-23" <?php if($tactive=='22-23'){  echo "selected"; }  ?>>10:00PM to 11:00PM</option>
+                        <option value="23-00" <?php if($tactive=='23-00'){  echo "selected"; }  ?>>11:00PM to 00:00AM</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  </div>
+                  
+
+                      <div id="portfolio-fancy-7F42qo5iwf" class="sh-portfolio-fancy sh-portfolio-fancy-columns3">
+                        
+                        @if(!empty($images))
+                        @foreach ($images as $item)
+                        <div class="sh-portfolio-fancy-item category-packaging" id="portfolio-661">
+                          <div class="sh-portfolio-fancy-itemc-container">
+                          <img class="sh-portfolio-img lazy" src="{{$item->image_url}}" alt="" />
+                            <div class="sh-portfolio-fancy-item-overlay">
+                              <div class="sh-portfolio-fancy-item-overlay-container">
+                                <div class="sh-portfolio-fancy-item-overlay-categories">
+                                <a id="shareimage" data-imageurl="{{$item->image_url}}" data-rel="popup" data-position-to="window" class="sh-portfolio-category sh-heading-font ui-btn ui-corner-all ui-shadow ui-btn-inline">View Photo</a>           
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        @endforeach()
+                        @else
+                        <h2 class="text-center">No Data Found.</h2>
+                        @endif
+                      </div>
+
+
+                      <style type="text/css">
+                        #portfolio-fancy-7F42qo5iwf .sh-portfolio-fancy-item-overlay-bg {background: rgba(0,0,0,0.55);background: -moz-linear-gradient(45deg, rgba(0,0,0,0.55) 0%, rgba(41,76,255,0.53) 100%);background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.55) 0%, rgba(41,76,255,0.53) 100%);background: linear-gradient(45deg, rgba(0,0,0,0.55) 0%, rgba(41,76,255,0.53) 100%);}#portfolio-fancy-7F42qo5iwf .sh-portfolio-fancy-item {padding: 0 0px; margin: 0px 0;}            
+                      </style>
+                      <style type="text/css"> .vc_column_1668033939:not(.vc_parallax):not(.jarallax) { overflow: center!important; position: relative; }</style>
+                    </div>
+                  </div>
+                </div>
+                <style type="text/css">@media (max-width: 800px) { #content .vc_row_1140879858, .sh-footer-template .vc_row_1140879858, .sh-header-template .vc_row_1140879858 { padding: 0px 0px 0px 0px!important;}}</style>
               </div>
               <div class="vc_row-full-width vc_clearfix"></div>
               <div class="sh-clear"></div>
@@ -307,7 +435,7 @@
       jQuery(document).ready(function ($) {
         
         
-             $('.primary-desktop .header-logo-container, .primary-mobile .header-logo-container').attr('href','//jevelin.shufflehound.com/hello/');
+             $('.primary-desktop .header-logo-container, .primary-mobile .header-logo-container').attr('href','https://www.lenskart.com/');
       
         function jevelin_settings() {
           if( $(window).width() < 600 ) {
@@ -640,7 +768,7 @@
 
             <ul>
               <li>Like the <a href="https://www.instagram.com/lenskart/?hl=en">@lenskart. </a></li>
-              <li>To enter the contest and mark the entry, the contestant needs to submit their Name, Phone Number and Email ID on the link <a href="http://lskt.me/MySpectacularMom">http://lskt.me/MySpectacularMom</a></li>
+            <li>To enter the contest and mark the entry, the contestant needs to submit their Name, Phone Number and Email ID on the link <a href="{{($url)?$url:''}}">{{($url)?$url:''}}</a></li>
               <li>Share a fun or cute selfie with his/her Mom along with your message for her. </li>
             </ul>
           </li>
@@ -662,6 +790,12 @@
       <script src="{{asset('js/jquery.mobile-1.4.5.min.js')}}"></script>
       <script src="{{asset('js/popup-iframe-map.js')}}"></script>
       <script src="{{asset('js/popup-iframe-video.js')}}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
+      <script>
+        window.dropdownDataURL = "{{url('/image/api')}}";
+        window.winnerData = "{{url('/winner/images')}}";
+      </script>
+      <script src="{{asset('js/custom.js')}}"></script>
       <script>
         $('.popup-tc').click(function(){
           $('.popup-terms').fadeIn();

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'SiteController@index')->name('home');
     
-Route::get('/image/api', 'SiteController@ApiCall');
+Route::post('/image/api', 'SiteController@ApiCall');
 Route::get('/winner/images', 'SiteController@winnerApi');
 Route::get('/share', 'SiteController@share');
 

@@ -76,6 +76,10 @@ ul.page-numbers a:hover,
 	border-bottom: 2px solid transparent;
 	display: inline-block;
 }
+
+#menuall-content .sh-filter-item#currentdata{
+	margin-left: 0;
+}
 #menuall-content .sh-filter-item.active{
 	color: #3b9f95;	
 	border-bottom: 2px solid #3b9f95;
@@ -123,7 +127,7 @@ a.sh-portfolio-category.sh-heading-font{
     display: flex;
     text-align: center;
     margin: 30px auto 0 auto;
-    max-width: 280px;
+	max-width: 165px;
 }
 
 .banner{
@@ -360,7 +364,7 @@ ul.page-numbers .current:hover,
 }
 .select-all {
     display: flex;
-    width:400px;
+    width:200px;
 }
 .select-all label{
 	width: 160px;
@@ -368,6 +372,7 @@ ul.page-numbers .current:hover,
 }
 .select-all .ui-select .ui-btn>span:not(.ui-li-count){
 	font-weight: 500;
+	font-size: 15px;
 }
 .download-icon{
 	position: absolute;
@@ -394,7 +399,7 @@ ul.page-numbers .current:hover,
  height: 35px;
 }
 .current-menu {
-	width: 500px;
+	width: 1001px;
 	display: flex;
 }
 .process-menu {
@@ -520,6 +525,7 @@ ul.page-numbers .current:hover,
 		width: 100%;
 		display: block;
 		margin: 9px 0;
+		margin-bottom: 25px;
 	}
 	.select-all{
 		width: 100%;
@@ -565,6 +571,11 @@ ul.page-numbers .current:hover,
 	.banner{
 		height: 417px;
 		margin-top: -28px;
+	}
+	a.sh-portfolio-category.sh-heading-font {
+		border-radius: 30px;
+		padding: 0 15px;
+		font-size: 13px;
 	}
 }
 

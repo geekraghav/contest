@@ -5,7 +5,7 @@ $(document).ready(function () {
         var ID = $(this).attr('data-id');
 
         var AppendOnSuccess = $(this).attr('data-appendid');
-        
+
 
         $(".loader").css("display", "block");
         $(_this).attr("disabled", "true");
@@ -33,4 +33,42 @@ $(document).ready(function () {
             }
         });
     });
+
+
+
+    $("#getdropdowndata").on("change", function () {
+
+        var timeSlot = $(this).val();
+        window.location.href = "?data=timeslot&timing=" + timeSlot;
+        // $.ajax({
+        //     type: "POST",
+        //     url: dropdownDataURL,
+        //     data: { timeSlot: timeSlot },
+        //     success: function (response) {
+        //         console.log(response);
+        //     }
+        // });
+
+    });
+
+
+
+    $("#winnerdata").on("click", function () {
+        window.location.href = "?data=winner";
+    });
+
+    $("#currentdata").on("click", function () {
+        window.location.href = "?data=current";
+    });
+
+    $("#shareimage").on("click", function () {
+        var imageURL = $(this).attr('data-imageurl');
+        window.location.href = "share?url="+imageURL;
+    });
+
+
+    $(function() {
+        $('.lazy').lazy();
+    });
+
 });
