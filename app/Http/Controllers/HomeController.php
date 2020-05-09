@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front_end.page.download');
+        return view('front_end.pages.download');
     }
 
     public function getAllImages()
