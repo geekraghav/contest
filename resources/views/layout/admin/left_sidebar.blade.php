@@ -19,6 +19,18 @@
           </div>
       </nav>
 </div>
+
+<div class="mdc-list-group">
+  <nav class="mdc-list mdc-drawer-menu">
+    <div class="mdc-list-item mdc-drawer-item">
+        <a class="mdc-drawer-link" href="/get-contest-list">
+        <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">track_changes</i>
+          Contest List
+        </a>
+      </div>
+  </nav>
+</div>
+
     <div class="profile-actions">
     <form action="{{ route('logout') }}" method="POST">
         {{ csrf_field() }}

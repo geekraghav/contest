@@ -24,7 +24,8 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/approve-image', 'HomeController@approveImage')->name('approve');
-    Route::get('/mark-as-winner', 'HomeController@markAsWinnner')->name('winner');
+    Route::post('/approve-image', 'HomeController@approveImage')->name('approve');
+    Route::post('/mark-as-winner', 'HomeController@markAsWinnner')->name('winner');
     Route::get('/image-list', 'HomeController@getAllImages')->name('imageslist');
+    Route::get('/get-contest-list', 'HomeController@getAllContestList')->name('contestlist');
 });
