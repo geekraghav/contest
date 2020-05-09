@@ -40,7 +40,7 @@ class SiteController extends Controller
         //     }
         //     $imageKey = array_keys($imageData); 
         // }
-        return view('front_end.pages.home');//->with('imageData',$imageData)->with('imageKey',$imageKey);
+        return view('front_end.pages.download');//->with('imageData',$imageData)->with('imageKey',$imageKey);
     }    
     
     public function postCall(Request $request)
