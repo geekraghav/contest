@@ -50,7 +50,8 @@
                   <th class="text-right">Is Winner</th>
                   <th class="text-right">Approved BY</th>
                   <th class="text-right">Created AT</th>
-                  <th class="text-right">Action</th>
+                  <th class="text-right">Approve</th>
+                  <th class="text-right">Reject</th>
                 </tr>
               </thead>
               <tbody>
@@ -94,7 +95,7 @@
                     <p>{{$list['created_at']}}</p>
                   </td>
                   <td class="text-right">
-                  <p>
+                  
                       <?php 
                         if($list['is_approved']==1){
                             $check = "disabled";
@@ -102,14 +103,16 @@
                             $check = "";
                         }
                     ?>
-                    <button type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-id="{{$list['id']}}" {{$check}}  class="mdc-button mdc-button--raised mdc-ripple-upgraded markapproved">Approve</button>
-                  </p>
+                    <button type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-id="{{$list['id']}}" data-cid="{{$list['conversation_id']}}" {{$check}}  class="mdc-button mdc-button--raised mdc-ripple-upgraded markapproved">Approve</button>
+                  </td>
+                  <td>
+                    <button type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-cid="{{$list['conversation_id']}}" data-id="{{$list['id']}}"  class="mdc-button mdc-button--raised mdc-ripple-upgraded markreject">Reject</button>
                   </td>
                 </tr>
                 @endforeach
                 @php($i)
                 @endif
-                {{$data->links()}}
+                {{@$data->links()}}
               </tbody>
             </table>
           </div>

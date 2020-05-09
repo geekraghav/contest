@@ -12,7 +12,13 @@
    <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}">
     <link rel='stylesheet' id='jevelin-theme-settings-css'  href="{{asset('css/jevelin-dynamic-styles.css?ver=112256582')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='jevelin-fonts-css'  href='https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,|Raleway:200,300,300i,400,400i,600,600i,700,700i,&#038;subset=latin' type='text/css' media='all' />
+    
     <script type='text/javascript' src="{{asset('js/jquery.js?ver=1.12.4-wp')}}"></script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MQ6XL9G');</script>
    
     <div class="sh-page-loader sh-table sh-page-loader-style-spinner">
       <div class="sh-table-cell">
