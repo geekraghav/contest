@@ -117,7 +117,7 @@
           </div>
         </header>
       </div>
-      <a href="lskt.me/MySpectacularMom" class="banner"></a>
+      <a href="http://lskt.me/MySpectacularMom" class="banner"></a>
       <div id="wrapper">
         <div class="content-container">
           <div class="container entry-content">
@@ -146,12 +146,12 @@
                           src="https://www.youtube.com/embed/tgbNymZ7vqY">
                           </iframe></div>
                         <div class="sh-element-margin">
-                          <h2>Happy Mother Day's</h2>
+                          <h2>Happy Mother's Day</h2>
                           <p><strong>Click, Share, and Win Eyewear worth Rs. 3000!
                       </strong></p>
                             <ol>
                               <li> Send us a message with your name and contact details on the link below.<br>
-                                <a href="lskt.me/MySpectacularMom">lskt.me/MySpectacularMom
+                                <a href="http://lskt.me/MySpectacularMom">lskt.me/MySpectacularMom
                                 </a></li>
                               <li> Share a fun or cute selfie with your Mom along with your message for her.</li>
                               <li>Wait for the name of 12 winners to be announced on our website, every hour*!</li>
@@ -164,13 +164,20 @@ Get started!</strong></p>
                               <li>Win an eyewear worth 3000/-</li>
                          </ol> -->
 
-                         <a href="#" class="tc popup"><i>Terms & Conditions</i></a>
+                         <a href="#" class="tc" id="term_cd"><i>Terms & Conditions</i></a>
 
                           <h2 class="sh-heading-content size-custom text-center">
-                            <a href="lskt.me/MySpectacularMom" class="participate">SHARE A SELFIE NOW</a>     
+                            <a href="http://lskt.me/MySpectacularMom" class="participate">SHARE A SELFIE NOW</a>     
                           </h2>
+                           <div class='term-cd' style="display: none;">
+<p>1- A free pair every hour offer excludes the time slot 12AM -9 AM</p>
+<p>2- Lenskart shall have the right to all content that in its sole discretion violates, or is alleged to violate, any applicable law or either the spirit or letter of these Terms of Use. We hereby acknowledge and affirm that these images constitute the opinion of the Individuals in their personal capacity, and may not represent official positions of Lenskart in any manner. Lenskart retains all copyright to these images.</p><br>
+
+</p>
+                          </div>
 
                           <h2>Contest Entries</h2>
+          
                         </div>
                       </div>
                       
@@ -609,42 +616,17 @@ Get started!</strong></p>
 
     <!-- popup start -->
     <link href="{{asset('css/jquery.simple-popup.min.css')}}" rel="stylesheet" type="text/css">
-    <script>
-    jQuery(document).ready(function() {
-      jQuery(".popup").simplePopup({ type: "html", htmlSelector: "#popup1" });
-    });
+    <script> 
+      $(document).ready(function(){
+        $("#term_cd").click(function(){
+          $(".term-cd").toggle();
+        });
+      });
+    // jQuery(document).ready(function() {
+    //   jQuery(".popup").simplePopup({ type: "html", htmlSelector: "#popup1" });
+    // });
     </script>
 
-    <!-- Term popup-->
-       <div id="popup1" class="popup-box">
-       <div class="photo-img">
-          <img src="images/photo.png">
-          <div class="photo-img-inner">
-            <img src="https://i.ytimg.com/vi/Cwu1x1SP3kQ/maxresdefault.jpg">
-        </div>
-      
-      </div>
-
-        <div class="sh-social-widgets">
-          <div class="sh-social-share-button sh-noselect">
-            <i class="icon-share"></i>
-            <span>Share</span>
-        </div>
-          <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-facebook"></i>
-          </a>
-                  <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-twitter"></i>
-          </a>
-                  <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-instagram"></i>
-          </a>
-                  <a href="#" class="sh-social-widgets-item" target="_blank">
-            <i class="icon-social-whatsapp"><img src="images/social-media.svg" width="20"></i>
-          </a>
-      </div>
-      </div>
-   <!-- End Term popup-->
      <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
           <iframe src="{{url('share')}}" width="497" height="298" seamless=""></iframe>
       </div>
@@ -653,7 +635,7 @@ Get started!</strong></p>
       <script src="{{asset('js/index.js')}}"></script>
       <script src="{{asset('js/jquery.mobile-1.4.5.min.js')}}"></script>
       <script src="{{asset('js/popup-iframe-map.js')}}"></script>
-      <script src="{{asset('js/popup-iframe-video.js.js')}}"></script>
+      <script src="{{asset('js/popup-iframe-video.js')}}"></script>
       
   </body>
 </html>
