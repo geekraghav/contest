@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contest Panel</title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="/assets/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="/assets/admin/assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="/assets/admin/assets/css/demo/style.css">
+    <link rel="stylesheet" href="/public/assets/admin/assets/css/demo/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="/assets/admin/assets/images/favicon.png" />
+    <link rel="shortcut icon" href="/public/assets/admin/assets/images/favicon.png" />
   </head>
   <body>
-    <script src="/assets/admin/assets/js/preloader.js"></script>
+    <script src="/public/assets/admin/assets/js/preloader.js"></script>
     <div class="body-wrapper">
       <div class="main-wrapper">
         <div class="page-wrapper full-page-wrapper d-flex align-items-center justify-content-center">
@@ -103,13 +103,13 @@
       </div>
     </div>
     <!-- plugins:js -->
-    <script src="/assets/admin/assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="/public/assets/admin/assets/vendors/js/vendor.bundle.base.js"></script>
     <!-- endinject -->
     <!-- Plugin js for this page-->
     <!-- End plugin js for this page-->
     <!-- inject:js -->
-    <script src="/assets/admin/assets/js/material.js"></script>
-    <script src="/assets/admin/assets/js/misc.js"></script>
+    <script src="/public/assets/admin/assets/js/material.js"></script>
+    <script src="/public/assets/admin/assets/js/misc.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page-->
     <!-- End custom js for this page-->
