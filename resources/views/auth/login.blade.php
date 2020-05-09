@@ -11,7 +11,6 @@
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <!-- End plugin css for this page -->
-    <link rel="stylesheet" href="{{asset('css/index.css')}}" type="text/css">
     <!-- Layout styles -->
     <link rel="stylesheet" href="/assets/admin/assets/css/demo/style.css">
     <!-- End layout styles -->
