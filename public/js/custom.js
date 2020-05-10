@@ -1,7 +1,8 @@
-$(document).ready(function () {
 
-    $("#markapproved").on('click', function () {
 
+    $(".markapproved").on('click', function () {
+
+        
         var _this = this;
         var userID = $(this).attr('data-userid');
         var ID = $(this).attr('data-id');
@@ -39,7 +40,8 @@ $(document).ready(function () {
     });
 
 
-    $("#markreject").on('click', function () {
+    $(".markreject").on('click', function () {
+
 
         var _this = this;
         var userID = $(this).attr('data-userid');
@@ -122,9 +124,3 @@ $(document).ready(function () {
 
     });
 
-
-    $(function () {
-        $('.lazy').lazy();
-    });
-
-});
