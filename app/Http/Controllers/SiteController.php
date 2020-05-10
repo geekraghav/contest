@@ -50,7 +50,6 @@ class SiteController extends Controller
 
         } else {
 
-            echo "hi";exit;
             $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)
             //->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)")
                 ->get()->toArray();

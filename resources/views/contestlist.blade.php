@@ -112,7 +112,7 @@
                     <?php 
                     if($list['is_approved']!=1){
                       ?>
-                      <button id="markreject" type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-cid="{{$list['conversation_id']}}" data-id="{{$list['id']}}" {{$dcheck}} class="mdc-button mdc-button--raised mdc-ripple-upgraded markreject">Reject</button>
+                      <button id="markreject" type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-cid="{{$list['conversation_id']}}" data-id="{{$list['id']}}" {{$check}}  {{$dcheck}} class="mdc-button mdc-button--raised mdc-ripple-upgraded markreject">Reject</button>
                       <?php
                     }
                 ?>
