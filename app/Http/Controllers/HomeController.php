@@ -93,7 +93,7 @@ class HomeController extends Controller
                                             [
                                                 "text" => [
                                                     "content" =>
-                                                    "Congrats! Your image has been approved for the competition. Please visit lenskart.com/mom/ to find out the winners.",
+                                                    "Congrats! Your image has been approved for the competition. Please visit https://mom.lenskart.com/ to find out the winners.",
                                                 ],
                                             ],
                                         ],
@@ -163,7 +163,7 @@ class HomeController extends Controller
                                             [
                                                 "text" => [
                                                     "content" =>
-                                                    "Congrats! Your image has been approved for the competition. Please visit lenskart.com/mom/ to find out the winners.",
+                                                    "Congrats! Your image has been approved for the competition. Please visit https://mom.lenskart.com/ to find out the winners.",
                                                 ],
                                             ],
                                         ],
