@@ -79,7 +79,7 @@ class HomeController extends Controller
                                             [
                                                 "text" => [
                                                     'content' =>
-                                                    'In case of any other Query, send "Help"',
+                                                    'In case you want to place an order, send "Help".',
                                                 ],
                                             ],
                                         ],
