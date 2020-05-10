@@ -117,13 +117,13 @@ class HomeController extends Controller
 
                 $input = $request->all();
 
-                dd($input);
 
                 try {
 
                     $tansactiosStatus = DB::transaction(function () use ($input) {
 
                         $data = Home::where('id', $input['id'])->first();
+
                         if ($data) {
 
                             $updateData = ['is_approved' => 2, 'approval_time' => now(), 'approved_by' => $input['userid'], 'updated_at' => now()];
