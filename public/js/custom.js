@@ -112,7 +112,7 @@ $(document).ready(function () {
 
     });
 
-    $("#shareimage").on("click", function () {
+    $("[id^='shareimage']").on("click", function () {
         var imageURL = $(this).attr('data-imageurl');
         if (checkPass) {
             window.location.href = "share?url=" + imageURL + "&" + checkPass;

@@ -292,6 +292,7 @@
                       <div id="portfolio-fancy-7F42qo5iwf" class="sh-portfolio-fancy sh-portfolio-fancy-columns3">
                         
                         @if(!empty($images))
+                        @php($i=0)
                         @foreach ($images as $item)
                         <div class="sh-portfolio-fancy-item category-packaging" id="portfolio-661">
                           <div class="sh-portfolio-fancy-itemc-container">
@@ -299,12 +300,13 @@
                             <div class="sh-portfolio-fancy-item-overlay">
                               <div class="sh-portfolio-fancy-item-overlay-container">
                                 <div class="sh-portfolio-fancy-item-overlay-categories">
-                                <a id="shareimage" data-imageurl="{{$item->image_url}}" data-rel="popup" data-position-to="window" class="sh-portfolio-category sh-heading-font ui-btn ui-corner-all ui-shadow ui-btn-inline">View Photo</a>           
+                                <a id="shareimage_{{$i}}" data-imageurl="{{$item->image_url}}" data-rel="popup" data-position-to="window" class="sh-portfolio-category sh-heading-font ui-btn ui-corner-all ui-shadow ui-btn-inline shareimage">View Photo</a>           
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                        @php($i++)
                         @endforeach()
                         @else
                         <h2 class="text-center">No Data Found.</h2>
