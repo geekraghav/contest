@@ -50,8 +50,7 @@
                   <th class="text-right">Is Winner</th>
                   <th class="text-right">Approved BY</th>
                   <th class="text-right">Created AT</th>
-                  <th class="text-right">Approve</th>
-                  <th class="text-right">Reject</th>
+                  <th class="text-right">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -102,19 +101,29 @@
                         }else{
                             $check = "";
                         }
+
+                        if($list['is_approved']==2){
+                            $dcheck = "disabled";
+                        }else{
+                            $dcheck = "";
+                        }
                     ?>
-                    <button id="markapproved" type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-id="{{$list['id']}}" data-cid="{{$list['conversation_id']}}" {{$check}}  class="mdc-button mdc-button--raised mdc-ripple-upgraded">Approve</button>
-                  </td>
-                  <td>
-                    <button id="markreject" type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-cid="{{$list['conversation_id']}}" data-id="{{$list['id']}}"  class="mdc-button mdc-button--raised mdc-ripple-upgraded">Reject</button>
+                    <button id="markapproved" type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-id="{{$list['id']}}" data-cid="{{$list['conversation_id']}}" {{$check}}  {{$dcheck}} class="mdc-button mdc-button--raised mdc-ripple-upgraded">Approve</button>
+                    <?php 
+                    if($list['is_approved']!=1){
+                      ?>
+                      <button id="markreject" type="submit" data-appendid="appendisapproved_{{$i}}" data-userid="{{auth()->user()->id}}" data-cid="{{$list['conversation_id']}}" data-id="{{$list['id']}}" {{$dcheck}} class="mdc-button mdc-button--raised mdc-ripple-upgraded">Reject</button>
+                      <?php
+                    }
+                ?>
                   </td>
                 </tr>
                 @endforeach
                 @php($i)
                 @endif
-                {{@$data->links()}}
               </tbody>
             </table>
+            {{@$data->links()}}
           </div>
         </div>
       </div>

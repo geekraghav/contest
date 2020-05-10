@@ -49,6 +49,10 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 |
 */
 
+if(extension_loaded('newrelic')) {
+    newrelic_set_appname('contest_app','',true);
+}
+
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
 $response = $kernel->handle(

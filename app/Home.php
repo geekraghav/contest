@@ -10,7 +10,9 @@ class Home extends Model
 
     public static function getContestData()
     {
-        $result = Home::select('id', 'user_id', 'conversation_id', 'mobile_no', 'image_url', 'is_approved', 'approved_by', 'is_winner', 'created_at')->where('is_approved','!=',2)->orderBy('created_at','DESC')->paginate(1);
+
+        $result = Home::select('id', 'user_id', 'conversation_id', 'mobile_no', 'image_url', 'is_approved', 'approved_by', 'is_winner', 'created_at')->orderBy('created_at','DESC')->paginate(1);
+
 
         if ($result->isNotEmpty()) {
             return $result;

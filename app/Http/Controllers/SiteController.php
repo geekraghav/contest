@@ -29,10 +29,16 @@ class SiteController extends Controller
                 } else if ($param['data'] == "timeslot") {
 
                     $timeSlot = explode('-', $param['timing']);
-                    $fromData = date('Y-m-d') . " $timeSlot[0]:00:00";
-                    $toData = date('Y-m-d') . " $timeSlot[1]:59:59";
+                    if (isset($timeSlot[1])) {
+                        $fromData = date('Y-m-d') . " $timeSlot[0]:00:00";
+                        $toData = date('Y-m-d') . " $timeSlot[1]:59:59";
 
-                    $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)->whereBetween('created_at', [$fromData, $toData])->get()->toArray();
+                        $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)->whereBetween('created_at', [$fromData, $toData])->get()->toArray();
+                    } else {
+                        $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)
+                        //->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)")
+                            ->get()->toArray();
+                    }
 
                 }
 
@@ -49,7 +55,6 @@ class SiteController extends Controller
                 ->get()->toArray();
 
         }
-
 
         return view('front_end.pages.home', compact('images'));
     }

@@ -90,6 +90,10 @@ class HomeController extends Controller
 
                 if ($tansactiosStatus['status'] == 200) {
 
+                    //send message
+
+                    //
+
                     return response()->json([$tansactiosStatus]);
                 } else {
                     return response()->json(['error' => 'Some error while fetching data.']);
@@ -100,7 +104,6 @@ class HomeController extends Controller
             return response()->json(['error' => $request->method() . '  is not allowed'], 401);
         }
     }
-
 
     public function rejectImage(Request $request)
     {
@@ -116,7 +119,6 @@ class HomeController extends Controller
             } else {
 
                 $input = $request->all();
-
 
                 try {
 
@@ -180,8 +182,6 @@ class HomeController extends Controller
             return response()->json(['error' => $request->method() . '  is not allowed'], 401);
         }
     }
-
-
 
     public function getAllContestList(Request $request)
     {
