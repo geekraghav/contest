@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Home;
 use DB;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Validator;
 
@@ -46,6 +47,8 @@ class HomeController extends Controller
                         $data = Home::where('id', $input['id'])->first();
                         if ($data) {
 
+                            $client = new Client();
+
                             $updateData = ['is_approved' => 1, 'approval_time' => now(), 'approved_by' => $input['userid'], 'updated_at' => now()];
 
                             if ($data['is_approved'] == null) {
@@ -55,6 +58,57 @@ class HomeController extends Controller
                                     $tansactiosStatus['status'] = 200;
                                     $tansactiosStatus['message'] = "Marked Approved";
                                     $tansactiosStatus['approvalMessage'] = 'Yes';
+
+                                    $conversationID = $data['conversation_id'];
+
+                                    $whatsAppPostFix = "/messages";
+                                    $whatsAppAPIURL = config('app.myoperator.whatsappsendmessageapi');
+                                    $finalMsgAPI = $whatsAppAPIURL . $conversationID . $whatsAppPostFix;
+                                    $bearerToken = config('app.myoperator.brearertoken');
+
+                                    $headers = [
+                                        'Authorization' => 'Bearer ' . $bearerToken,
+                                        'Content-Type' => 'application/json',
+                                    ];
+
+                                    $sendJson2 = [
+                                        "actor_type" => "user",
+                                        "actor_id" => "00bda69e-1c88-4f61-bec3-3dcf6bc8e18f",
+                                        "message_type" => "normal",
+                                        "message_parts" => [
+                                            [
+                                                "text" => [
+                                                    'content' =>
+                                                    'In case of any other Query, send "Help"',
+                                                ],
+                                            ],
+                                        ],
+                                    ];
+
+                                    $sendJson = [
+                                        "actor_type" => "user",
+                                        "actor_id" => "00bda69e-1c88-4f61-bec3-3dcf6bc8e18f",
+                                        "message_type" => "normal",
+                                        "message_parts" => [
+                                            [
+                                                "text" => [
+                                                    "content" =>
+                                                    "Congrats! Your image has been approved for the competition. Please visit lenskart.com/mom/ to find out the winners.",
+                                                ],
+                                            ],
+                                        ],
+                                    ];
+
+                                    $res = $client->post($finalMsgAPI, [
+                                        'headers' => $headers,
+                                        'json' => $sendJson,
+                                    ]);
+
+                                    $res = $client->post($finalMsgAPI, [
+                                        'headers' => $headers,
+                                        'json' => $sendJson2,
+                                    ]);
+
                                     return $tansactiosStatus;
                                 }
 
@@ -74,6 +128,57 @@ class HomeController extends Controller
                                     $tansactiosStatus['status'] = 200;
                                     $tansactiosStatus['message'] = "Marked Approved";
                                     $tansactiosStatus['approvalMessage'] = 'Yes';
+
+                                    $conversationID = $data['conversation_id'];
+
+                                    $whatsAppPostFix = "/messages";
+                                    $whatsAppAPIURL = config('app.myoperator.whatsappsendmessageapi');
+                                    $finalMsgAPI = $whatsAppAPIURL . $conversationID . $whatsAppPostFix;
+                                    $bearerToken = config('app.myoperator.brearertoken');
+
+                                    $headers = [
+                                        'Authorization' => 'Bearer ' . $bearerToken,
+                                        'Content-Type' => 'application/json',
+                                    ];
+
+                                    $sendJson2 = [
+                                        "actor_type" => "user",
+                                        "actor_id" => "00bda69e-1c88-4f61-bec3-3dcf6bc8e18f",
+                                        "message_type" => "normal",
+                                        "message_parts" => [
+                                            [
+                                                "text" => [
+                                                    'content' =>
+                                                    'In case of any other Query, send "Help"',
+                                                ],
+                                            ],
+                                        ],
+                                    ];
+
+                                    $sendJson = [
+                                        "actor_type" => "user",
+                                        "actor_id" => "00bda69e-1c88-4f61-bec3-3dcf6bc8e18f",
+                                        "message_type" => "normal",
+                                        "message_parts" => [
+                                            [
+                                                "text" => [
+                                                    "content" =>
+                                                    "Congrats! Your image has been approved for the competition. Please visit lenskart.com/mom/ to find out the winners.",
+                                                ],
+                                            ],
+                                        ],
+                                    ];
+
+                                    $res = $client->post($finalMsgAPI, [
+                                        'headers' => $headers,
+                                        'json' => $sendJson,
+                                    ]);
+
+                                    $res = $client->post($finalMsgAPI, [
+                                        'headers' => $headers,
+                                        'json' => $sendJson2,
+                                    ]);
+
                                     return $tansactiosStatus;
                                 }
                             }

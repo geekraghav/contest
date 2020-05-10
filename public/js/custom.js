@@ -17,7 +17,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: markApprovedURL,
-            data: { id: ID, userid: userID,cid:cid },
+            data: { id: ID, userid: userID, cid: cid },
             success: function (response) {
 
                 $.each(response, function (indexInArray, valueOfElement) {
@@ -55,7 +55,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: markrejectURL,
-            data: { id: ID, userid: userID,cid:cid },
+            data: { id: ID, userid: userID, cid: cid },
             success: function (response) {
 
                 $.each(response, function (indexInArray, valueOfElement) {
@@ -80,7 +80,7 @@ $(document).ready(function () {
     $("#getdropdowndata").on("change", function () {
 
         var timeSlot = $(this).val();
-        window.location.href = "?data=timeslot&timing=" + timeSlot+"&"+checkPass;
+        window.location.href = "?data=timeslot&timing=" + timeSlot + "&" + checkPass;
         // $.ajax({
         //     type: "POST",
         //     url: dropdownDataURL,
