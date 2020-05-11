@@ -26,7 +26,7 @@ class SiteController extends Controller
                     $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_winner', 1)->orderBy('created_at','DESC')->get()->toArray();
                 } else if ($param['data'] == "current") {
                     $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)
-                    ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)")
+                    ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 5 HOUR)")
                     ->orderBy('created_at','DESC')->get()->toArray();
                 } else if ($param['data'] == "timeslot") {
 
@@ -38,7 +38,7 @@ class SiteController extends Controller
                         $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)->whereBetween('created_at', [$fromData, $toData])->orderBy('created_at','DESC')->get()->toArray();
                     } else {
                         $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)
-                        ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)")
+                        ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 5 HOUR)")
                         ->orderBy('created_at','DESC')->get()->toArray();
                     }
 
@@ -46,14 +46,14 @@ class SiteController extends Controller
 
             } else {
                 $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)
-                ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)")
+                ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 5 HOUR)")
                 ->orderBy('created_at','DESC')->get()->toArray();
             }
 
         } else {
 
             $images = DB::table('message_synch_t1')->select('conversation_id', 'user_id', 'mobile_no', 'image_url', 'created_at')->where('is_approved', 1)
-            ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 1 HOUR)")
+            ->whereRaw("created_at >= DATE_SUB(NOW(), INTERVAL 5 HOUR)")
             ->orderBy('created_at','DESC')->get()->toArray();
 
         }
