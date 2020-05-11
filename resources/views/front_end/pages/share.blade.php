@@ -57,9 +57,8 @@
           <a href="#" class="sh-social-widgets-item" target="_blank">
              <i class="icon-social-whatsapp"><img src="images/social-media.svg" width="20"></i>
           </a>   -->
-          <div class="download-icon sh-social-share-button sh-noselect" id="foo"> <i class="icon-social-download"><img src="images/download.svg" width="30"></i> <span>Download</span>  
-            
-           </div>  
+          {{-- <div class="download-icon sh-social-share-button sh-noselect" id="foo"> <i class="icon-social-download"><img src="images/download.svg" width="30"></i> <span>Download</span>     
+           </div>   --}}
      </div>
     
      </div>
